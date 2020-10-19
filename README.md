@@ -1,14 +1,18 @@
-php-apple-signin
+php-apple-signin Apple 苹果账号登陆
 =======
 PHP library to manage Sign In with Apple identifier tokens, and validate them server side passed through by the iOS client.
 
-Installation
+PHP库来管理使用Apple标识符令牌的登录，并验证iOS客户端通过的服务器端。
+
+Installation 安装
 ------------
 
 Use composer to manage your dependencies and download php-apple-signin:
 
+需要您的项目使用 composer 管理依赖，使用下方命令安装此库。
+
 ```bash
-composer require griffinledingham/php-apple-signin
+composer require yanlongli/php-apple-signin
 ```
 
 Example
@@ -16,9 +20,9 @@ Example
 ```php
 <?php
 use AppleSignIn\ASDecoder;
-
-$clientUser = "example_client_user";
-$identityToken = "example_encoded_jwt";
+// ASAuthorizationAppleIDCredential credential
+$clientUser = "example_client_user"; //credential.user
+$identityToken = "example_encoded_jwt"; // credential.identityToken
 
 $appleSignInPayload = ASDecoder::getAppleSignInPayload($identityToken);
 
