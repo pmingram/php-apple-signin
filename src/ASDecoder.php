@@ -26,7 +26,6 @@ class ASDecoder
      * Parse a provided Sign In with Apple identity token.
      *
      * @param string $identityToken
-     * @return object|null
      * @throws Exception
      */
     public static function getAppleSignInPayload($identityToken)
@@ -39,7 +38,6 @@ class ASDecoder
      * Decode the Apple encoded JWT using Apple's public key for the signing.
      *
      * @param string $identityToken
-     * @return object
      * @throws Exception
      */
     public static function decodeIdentityToken($identityToken)
